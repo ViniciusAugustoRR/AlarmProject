@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">Alarm</string>
+    <string name="app_name">Online Alarm</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Hints-->
+    <string name="Alarm_Title_Holder">Alarm Title</string>
+    <string name="Alarm_Url_Holder">Alarm video Url</string>
+
+    <!--Buttons-->
+    <string name="New_Alarm">New Alarm</string>
+    <string name="Save_New_Alarm">Save</string>
+
+
+
 </resources>

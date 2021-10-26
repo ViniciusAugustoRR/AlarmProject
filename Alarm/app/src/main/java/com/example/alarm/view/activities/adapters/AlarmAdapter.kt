@@ -1,24 +1,20 @@
 package com.example.alarm.view.activities.adapters
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alarm.R
 import com.example.alarm.model.AlarmModel
-import com.example.alarm.view.activities.NewAlarm
 import kotlinx.android.synthetic.main.card_alarm.view.*
 
 class AlarmAdapter(private val interaction: ItemInteraction? = null) :
         RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
-    lateinit var Alarms : ArrayList<AlarmModel>
+    lateinit var alarms : ArrayList<AlarmModel>
 
     fun setAlarmList(newAlarmList : ArrayList<AlarmModel>){
-        Alarms = newAlarmList
+        alarms = newAlarmList
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -33,7 +29,7 @@ class AlarmAdapter(private val interaction: ItemInteraction? = null) :
         )
     }
     override fun getItemCount(): Int {
-        return Alarms.size
+        return alarms.size
     }
 
 
@@ -41,7 +37,7 @@ class AlarmAdapter(private val interaction: ItemInteraction? = null) :
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder){
             is AlarmRecyclerVH -> {
-                holder.bind(Alarms[position], position)
+                holder.bind(alarms[position], position)
             }
         }
     }

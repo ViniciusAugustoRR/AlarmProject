@@ -6,43 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".view.activities.NewAlarm">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/new_alarm_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/teal_700"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <Button
-                android:id="@+id/menu_add_alarm_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Return"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:backgroundTint="@color/white"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.appcompat.widget.Toolbar>
-
     <TimePicker
         android:id="@+id/new_alarm_clock"
         android:layout_width="0dp"
         android:layout_height="400dp"
         android:timePickerMode="clock"
 
-        app:layout_constraintTop_toBottomOf="@id/new_alarm_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
@@ -51,6 +21,8 @@
         android:id="@+id/new_alarm_mainTitle"
         android:layout_width="0dp"
         android:layout_height="50dp"
+
+        android:hint="@string/Alarm_Title_Holder"
         android:textSize="16sp"
         android:textColor="@color/black"
 
@@ -61,13 +33,15 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
-        tools:text="ALARME MAING TITLE"
-        />
+        android:autofillHints=""
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/new_alarm_Url"
         android:layout_width="0dp"
         android:layout_height="50dp"
+
+        android:hint="@string/Alarm_Url_Holder"
         android:textSize="16sp"
         android:textColor="@color/black"
 
@@ -78,7 +52,22 @@
         android:layout_marginTop="25dp"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
-        tools:text="ALARME URL"
+        android:autofillHints=""
+        android:inputType="text"
+        tools:ignore="TextFields" />
+
+    <Button
+        android:id="@+id/new_alarm_save_alarm"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:text="@string/Save_New_Alarm"
+        android:backgroundTint="@color/teal_200"
+
+        app:layout_constraintTop_toBottomOf="@id/new_alarm_Url"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
